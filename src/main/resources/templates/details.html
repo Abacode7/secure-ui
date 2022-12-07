@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
 
 <h1>My Details</h1>
 <p>My first paragraph.</p>
+
+<div>
+    <table>
+        <tr></tr>
+        <tr th:each="toll stations: ${tollStations}">
+            <td th:text="${tollStations.stationId}"></td>
+            <td th:text="${tollStations.mileMarker}"></td>
+            <td th:text="${tollStations.stallCount}"></td>
+        </tr>
+    </table>
+</div>
 
 </body>
 </html>
